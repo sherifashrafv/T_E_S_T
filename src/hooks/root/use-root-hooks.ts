@@ -19,7 +19,7 @@ import {
 	useFooterStore,
 	useSocialMediaStore,
 } from "@/store";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 export const useHomeQuery = () => {
 	const { setCategories } = useCategoriesStore();
