@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html,
+:root {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --card-main: #F2F4F4;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: #202020;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --gray-text: #A3A3A3;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  .shape {
+    background-image: url("../assets/images/bg-shape.webp");
+    background-size: 120% 120%;
+    background-blend-mode: overlay;
+    background-position: center;
+  }
+}
+
+/* Custom Phone Number in Contact us */
+@layer base {
+  .phone {
+    @apply w-full;
+  }
+
+  .phone_contact,
+  .phone_contact_ar {
+    @apply !h-[45px] !w-full;
+  }
+
+  .phone_contact input,
+  .phone_contact_ar input {
+    @apply !w-full !h-full !border !border-border !pl-[65px] !rounded-md !text-[16px] !text-secondary-gray !tracking-wider !font-normal;
+  }
+
+  .phone_contact_ar input {
+    @apply !pr-[65px] !pl-5;
+  }
+
+  .phone_contact .flag-dropdown,
+  .phone_contact_ar .flag-dropdown {
+    @apply !border-r !border-border !w-[60px] !bg-white !border-border !rounded-l-md;
+  }
+
+  .phone_contact_ar .flag-dropdown {
+    @apply !border-l !border-border !rounded-r-md !rounded-l-none;
+  }
+
+  .phone_contact .react-tel-input .selected-flag:hover,
+  .phone_contact .react-tel-input .selected-flag:focus,
+  .phone_contact .react-tel-input .flag-dropdown.open,
+  .phone_contact .react-tel-input .flag-dropdown.open .selected-flag {
+    @apply !bg-[""] !rounded-l-md;
+  }
+
+  .phone_contact_ar .react-tel-input .selected-flag:hover,
+  .phone_contact_ar .react-tel-input .selected-flag:focus,
+  .phone_contact_ar .react-tel-input .flag-dropdown.open,
+  .phone_contact_ar .react-tel-input .flag-dropdown.open .selected-flag {
+    @apply !bg-[""] !rounded-r-md !rounded-l-none;
+  }
+
+  .phone_contact .flag-dropdown .selected-flag {
+    @apply !pl-5 !rounded-l-md !w-[60px];
+  }
+
+  .phone_contact_ar .flag-dropdown .selected-flag {
+    @apply !rounded-r-md !rounded-l-none !pr-5 !pl-0;
+  }
+
+  /* .phone .selected-flag>div {
+    @apply ;
+  } */
+
+  .phone .selected-flag .arrow {
+    @apply !hidden;
+  }
+}

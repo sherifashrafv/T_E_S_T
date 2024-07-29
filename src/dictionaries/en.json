@@ -1,0 +1,56 @@
+{
+	"Navigations": {
+		"home": "Home",
+		"about": "About us",
+		"store": "Store",
+		"sale": "Sale",
+		"blog": "Blog",
+		"contact": "Contact us",
+		"profile": "Profile",
+		"terms": "Terms & Conditions",
+		"privacy": "Privacy Policy",
+		"logout": "Logout"
+	},
+	"Hero": {
+		"header": "Unique Style, Timeless Elegance",
+		"title": "Explore the world of elegance.",
+		"description": "Discover our distinguished collection of the latest fashion trends and elegance. We offer you an exceptional shopping experience that combines authenticity with modern elegance."
+	},
+	"Headers": {
+		"flash": "Discover our flash sale",
+		"arrivals": "Discover New Arrivals",
+		"contact": "Contact Us"
+	},
+	"Categories": {
+		"header": "Shop By Category",
+		"kaftan": "Kaftan",
+		"jumpsuits": "Jumpsuits",
+		"accessories": "Accessories",
+		"abaya": "Abaya",
+		"evening-gowns": "Evening Gowns",
+		"dresses": "Dresses"
+	},
+	"Contact": {
+		"header": "Contact Us",
+		"title": "We are here to provide support and answer all your questions. Do not hesitate to contact us for any assistance.",
+		"name": "Name",
+		"address": "Address",
+		"email": "Email Address",
+		"phone": "Phone Number",
+		"message": "Your Message",
+		"send": "Send Your Message",
+		"chat": "Live Chat with Us"
+	},
+	"ProfileLinks": {
+		"settings": "Account Settings",
+		"orders": "My Orders",
+		"R-orders": "Return Orders",
+		"D-addresses": "Delivery Addresses",
+		"add": "Add New Address",
+		"F-products": "Favorite Products",
+		"M-wallet": "My Wallet",
+		"L-points": "Loyalty Points",
+		"D-coupons": "Discount Coupons",
+		"Signout": "Signout"
+	}
+}
