@@ -19,48 +19,46 @@ import {
 	useFooterStore,
 	useSocialMediaStore,
 } from "@/store";
-import { useEffect, useState } from "react";
+import { useEffect, useState , useCallback } from "react";
 
 export const useHomeQuery = () => {
 	const { setCategories } = useCategoriesStore();
 	const { setSocialMedia } = useSocialMediaStore();
-
+  
 	const [data, setData] = useState<any>(null); // Type `data` appropriately
 	const [loading, setLoading] = useState<boolean>(true);
 	const [error, setError] = useState<unknown>(null); // Type error as unknown
-
-	const fetchData = async () => {
-		const headers = { "Content-Type": "application/json" };
-		try {
-			setLoading(true);
-			const response = await axios.get("/home", { headers });
-			const { Whatsapp, facebook, twitter, instegram, categories } =
-				response.data?.data;
-
-			setSocialMedia({
-				whatsapp: Whatsapp,
-				facebook,
-				twitter,
-				instegram,
-			});
-			setCategories(categories);
-
-			setData(response.data);
-		} catch (error) {
-			console.error("Failed to fetch home data", error);
-			setError(error as unknown); // Assert error as unknown
-		} finally {
-			setLoading(false);
-		}
-	};
-
+  
+	const fetchData = useCallback(async () => {
+	  const headers = { "Content-Type": "application/json" };
+	  try {
+		setLoading(true);
+		const response = await axios.get("/home", { headers });
+		const { Whatsapp, facebook, twitter, instegram, categories } = response.data?.data;
+  
+		setSocialMedia({
+		  whatsapp: Whatsapp,
+		  facebook,
+		  twitter,
+		  instegram,
+		});
+		setCategories(categories);
+  
+		setData(response.data);
+	  } catch (error) {
+		console.error("Failed to fetch home data", error);
+		setError(error as unknown); // Assert error as unknown
+	  } finally {
+		setLoading(false);
+	  }
+	}, [setCategories, setSocialMedia]);
+  
 	useEffect(() => {
-		fetchData();
-	}, [fetchData, setCategories, setSocialMedia]);
-
+	  fetchData();
+	}, [fetchData]);
+  
 	return { data, loading, error, refetch: fetchData };
-};
-
+  };
 export const useFooterQuery = () => {
 	const { footerData, setFooterData } = useFooterStore();
 	const getFooterData = async () => {

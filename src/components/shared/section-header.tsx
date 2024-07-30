@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, memo } from "react";
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const SectionHeader = ({ header }: { header: string }) => {
