@@ -56,10 +56,11 @@ export const useHomeQuery = () => {
 
 	useEffect(() => {
 		fetchData();
-	}, [setCategories, setSocialMedia]);
+	}, [fetchData, setCategories, setSocialMedia]);
 
 	return { data, loading, error, refetch: fetchData };
 };
+
 export const useFooterQuery = () => {
 	const { footerData, setFooterData } = useFooterStore();
 	const getFooterData = async () => {

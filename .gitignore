@@ -13,7 +13,6 @@
 /.next/
 /out/
 /.million/
-/build.zip
 
 # production
 /build
