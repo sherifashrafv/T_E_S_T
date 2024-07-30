@@ -320,7 +320,7 @@ export interface OrdersProps {
 	whatsapp: string;
 }
 export interface HomeData {
-	categories: Category[];
+	categories: any;
 	offers: {
 		items: ProductProps[];
 	};
@@ -332,8 +332,4 @@ export interface HomeData {
 	};
 	apple_store_link: string;
 	android_store_link: string;
-}
-
-export interface Category {
-	// Define your category fields here
 }
